@@ -4,5 +4,4 @@ saveUserNickname:
     mov     ebx, 0
     mov     eax, 3
     int     80h
-    
     ret
