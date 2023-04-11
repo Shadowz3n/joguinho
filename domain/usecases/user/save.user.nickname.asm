@@ -1,7 +1,11 @@
+global saveUserNickname
+section     .text
+
 saveUserNickname:
-    mov     edx, 255
-    mov     ecx, userNickName
-    mov     ebx, 0
-    mov     eax, 3
-    int     80h
+    mov rdi, promptWriteYourName
+    call puts
+
+    mov rdi, userNickNameBuffer
+    call fgets
+    
     ret
